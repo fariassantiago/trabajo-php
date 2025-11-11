@@ -2,10 +2,11 @@
 include("conexion.php");
 
 $nombre = $_POST['nombre'];
+$nuevonombre = $_POST['nuevo_nombre'];
 $nuevo_mail = $_POST['nuevo_mail'];
 $nuevo_curso = $_POST['nuevo_curso'];
 
-$sql = "UPDATE t_alumnos_del_curso SET Mail = '$nuevo_mail', Codigo_Curso = '$nuevo_curso' WHERE NombreDelUsuario = '$nombre'";
+$sql = "UPDATE t_alumnos_del_curso SET NombreDelUsuario='$nuevonombre',Mail = '$nuevo_mail', Codigo_Curso = '$nuevo_curso'  WHERE NombreDelUsuario = '$nombre'";
 
 if (mysqli_query($conexion, $sql)) {
     $filas = mysqli_affected_rows($conexion);
