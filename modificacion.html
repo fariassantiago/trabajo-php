@@ -34,13 +34,17 @@
       <label for="nombre">Nombre del alumno a modificar:</label><br>
       <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Ingrese Nombre"><br><br>
 
+      
+        <label for="nuevo_nombre">Nuevo nombre:</label><br>
+      <input type="text" id="nuevo_nombre" name="nuevo_nombre" maxlength="30" required><br><br>
+
       <label for="nuevo_mail">Nuevo mail:</label><br>
       <input type="email" id="nuevo_mail" name="nuevo_mail" maxlength="30" required><br><br>
 
-      <label for="nuevo_curso">Nuevo código de curso (2 dígitos):</label><br>
+      <label for="nuevo_curso">Nuevo código de curso (1-5):</label><br>
       <input type="number" id="nuevo_curso" name="nuevo_curso" min="1" max="99" required><br><br>
 
-      <button class="btn" type="submit">Actualizar</button>
+      <button id="btnactualizar" class="btn" type="submit">Actualizar</button>
     </div>
     </form>
   </main>

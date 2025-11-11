@@ -141,3 +141,53 @@ nav > ul > li > a:hover {
         display: block;
     }
 }
+#btneliminar {
+    width: 200px;
+    padding: 15px 20px;
+    margin: auto;
+    margin-left: 70px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+#btneliminar:hover {
+    box-shadow: 0 6px 16px rgba(231, 76, 60, 0.6),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+#btneliminar:active {
+    transform: translateY(-1px);
+}
+#btnactualizar {
+    width: 200px;
+    padding: 15px 20px;
+    margin: auto;
+    margin-left: 70px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+#btnactualizar:hover {
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.6),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+#btnactualizar:active {
+    transform: translateY(-1px);
+}

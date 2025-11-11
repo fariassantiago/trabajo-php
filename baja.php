@@ -5,7 +5,7 @@ $nombre = $_POST['nombre'];
 
 $sql = "DELETE FROM t_alumnos_curso WHERE NombreDelUsuario = '$nombre'";
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conexion, $sql)) {
     $filas = mysqli_affected_rows($conexion);
 
     if ($filas > 0) {
