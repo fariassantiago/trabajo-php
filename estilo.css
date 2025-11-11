@@ -191,3 +191,27 @@ nav > ul > li > a:hover {
 #btnactualizar:active {
     transform: translateY(-1px);
 }
+#btnalta {
+    width: 200px;
+    padding: 15px 20px;
+    margin: auto;
+    margin-left: 70px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+#btnalta:hover {
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.6),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+#btnalta:active {
+    transform: translateY(-1px);
+}
