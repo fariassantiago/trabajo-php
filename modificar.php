@@ -16,7 +16,7 @@ if (mysqli_query($conexion, $sql)) {
         echo "<h2> No se encontró ningún alumno con ese nombre.</h2>";
     }
 
-    echo "<br><a href='modificar.html'>Volver</a>";
+    echo "<br><a href='modificacion.html'>Volver</a>";
 } else {
     echo "<h2>Error al modificar: " . mysqli_error($conexion) . "</h2>";
 }

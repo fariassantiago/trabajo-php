@@ -28,10 +28,11 @@
   </nav>
 
   <main>
-    <h2>Modificar Registro</h2>
+    <div class="card-baja">
+    <h1 class="titulo-card">Modificar Registro</h1>
     <form action="modificar.php" method="post">
       <label for="nombre">Nombre del alumno a modificar:</label><br>
-      <input type="text" id="nombre" name="nombre" maxlength="30" required><br><br>
+      <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Ingrese Nombre"><br><br>
 
       <label for="nuevo_mail">Nuevo mail:</label><br>
       <input type="email" id="nuevo_mail" name="nuevo_mail" maxlength="30" required><br><br>
@@ -40,6 +41,7 @@
       <input type="number" id="nuevo_curso" name="nuevo_curso" min="1" max="99" required><br><br>
 
       <button type="submit">Actualizar</button>
+    </div>
     </form>
   </main>
 </body>
