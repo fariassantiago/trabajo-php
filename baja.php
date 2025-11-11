@@ -3,10 +3,10 @@ include("conexion.php");
 
 $nombre = $_POST['nombre'];
 
-$sql = "DELETE FROM alumnos WHERE NombreDelUsuario = '$nombre'";
+$sql = "DELETE FROM t_alumnos_curso WHERE NombreDelUsuario = '$nombre'";
 
 if (mysqli_query($conn, $sql)) {
-    $filas = mysqli_affected_rows($conn);
+    $filas = mysqli_affected_rows($conexion);
 
     if ($filas > 0) {
         echo "<h2>Se eliminaron $filas registro(s) con el nombre '$nombre'.</h2>";
@@ -16,8 +16,8 @@ if (mysqli_query($conn, $sql)) {
 
     echo "<br><a href='baja.html'>Volver</a>";
 } else {
-    echo "<h2>Error al eliminar: " . mysqli_error($conn) . "</h2>";
+    echo "<h2>Error al eliminar: " . mysqli_error($conexion) . "</h2>";
 }
 
-mysqli_close($conn);
+mysqli_close($conexion);
 ?>
