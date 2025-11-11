@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto PHP</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+    <body>
+        <header>
+        <h1 class="titulo">Proyecto PHP</h1>
+        </header>
+    <nav>
+<ul>
+  <li><a href="index.html">Inicio</a></li>
+  <li class="submenu">
+    <a href="#">Elegir</a>
+        <ul>
+            <div class="submenu-cont">
+                <li><a href="alta.html">Dar de Alta</a></li>
+                <li><a href="baja.html">Dar de Baja</a></li>
+                <li><a href="modificacion.html">Modificar Registro</a></li>
+
+            </div>
+            
+        </ul>
+    </nav>
+</ul>
+<main>
+                <h1 class="titulo-alta">acta de alumnos</h1>
+                <form action="alta.php" method="post">
+                    ingrese nombre:
+                     <input type="text" name="nombre">
+                     ingrese email:
+                     <input type="email" name="email">
+                     <select name="codigo curso">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        </select>
+                    <input type="submit" value="DarAlta">
+                </form>
+            </main> 
+</body>
+</html>
