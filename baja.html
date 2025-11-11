@@ -31,9 +31,13 @@
         <div class="card-baja">
         <h1 class="titulo-card">Dar de Baja</h1>
         <form action="baja.php" method="post">
-          <label for="nombre">Ingrese el nombre del alumno a eliminar:</label><br>
-          <input type="text" id="nombre" name="nombre" maxlength="30" required><br><br>
-          <button type="submit">Eliminar</button>
+
+          <label for="nombre">Nombre del alumno a eliminar:</label>
+          <br>
+          <input type="text" id="nombre" name="nombre" maxlength="30" required placeholder="Ingrese Nombre del alumno">
+          <br><br>
+            <button class="btn-eliminar" type="submit">Eliminar</button>
+
         </div>
         </form>
   </main>
