@@ -36,10 +36,15 @@
     <label>Correo electrónico:</label>
     <input type="email" name="mail" required><br><br>
 
-    <label>Código del curso (1-5):</label>
-    <input type="number" name="codigo_curso" min="1" max="5" required><br><br>
-
-    <input id="btnalta" type="submit" value="Dar de alta">
+    <label>Curso a Realizar:</label>
+<select name="codigo_curso" required>
+    <option value="1">PHP</option>
+    <option value="2">JavaScript</option>
+    <option value="3">HTML</option>
+    <option value="4">CSS</option>
+    <option value="5">Python</option>
+</select><br><br>
+    <input class="btn-confirmar" type="submit" value="Confirmar Alta">
     </div>
   </form>
             </main> 

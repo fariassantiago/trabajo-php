@@ -1,8 +1,12 @@
-git stash popgit stash pop
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de Alumno</title>
+</head>
 <body>
 <?php
-$conexion = mysqli_connect("localhost", "root", "1111111111", "iac")
-or die("Problemas con la conexión");
+include("conexion.php");
 
 mysqli_query($conexion, "insert into t_alumnos_del_curso(NombreDelUsuario, Mail, Codigo_Curso) 
 values ('$_REQUEST[nombredelusuario]', '$_REQUEST[mail]', '$_REQUEST[codigo_curso]')")
@@ -12,3 +16,4 @@ mysqli_close($conexion);
 echo "El alumno fue dado de alta.";
 ?>
 </body>
+</html>
