@@ -1,11 +1,9 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "iac");
+$conexion = mysqli_connect("localhost", "root", "", "iac", 3307);
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());
 } else {
     echo "Conexión exitosa a la base de datos IAC.";
 }
-
-mysqli_close($conexion);
 ?>
