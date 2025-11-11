@@ -8,38 +8,44 @@
 body {
     font-family: 'poppins', sans-serif;
     background: #464646;
-    min-height:10px;
+    min-height: 100vh;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background: #0872cf;
     padding: 3.5rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .titulo {
     color: #ffffff;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 nav {
     background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav > ul {
     list-style: none;
     display: flex;
     padding: 4px;
-    margin: 0px;
+    margin: 0;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 nav > ul > li {
-    position:relative;
-    margin:-3px 20px
+    position: relative;
+    margin: -3px 20px;
 }
 
 nav > ul > li > a {
@@ -48,10 +54,11 @@ nav > ul > li > a {
     color: #ecf0f1;
     text-decoration: none;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 nav > ul > li > a:hover {
-    background-color: #8f9ba7;
+    background-color: #0872cf;
 }
 
 .submenu > ul {
@@ -60,11 +67,12 @@ nav > ul > li > a:hover {
     background-color: #0b63b6;
     min-width: 200px;
     display: none;
+    list-style: none;
 }
 
 .submenu:hover > ul {
     display: block;
-} 
+}
 
 .submenu-cont {
     padding: 0;
@@ -83,6 +91,7 @@ nav > ul > li > a:hover {
     padding: 12px 20px;
     color: #ecf0f1;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .submenu-cont a:hover {
@@ -94,30 +103,206 @@ nav > ul > li > a:hover {
     font-size: 0.7rem;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+main h2 {
+    color: #0872cf;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form {
+    background: #333333;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    border-left: 5px solid #0872cf;
+}
+
+label {
+    display: block;
+    color: #ecf0f1;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.875rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #555;
+    border-radius: 6px;
+    background: #444444;
+    color: #ecf0f1;
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #0872cf;
+    background: #555555;
+    box-shadow: 0 0 0 3px rgba(8, 114, 207, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 0.875rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+br {
+    display: none;
+}
+
+footer {
+    background-color: #000000;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .titulo {
         font-size: 1.5rem;
     }
-    
+
+    header {
+        padding: 2rem 0;
+    }
+
     nav > ul {
         flex-direction: column;
     }
-    
+
     nav > ul > li {
         width: 100%;
     }
-    
+
     nav > ul > li > a {
         text-align: center;
         padding: 12px;
     }
-    
-    .submenu > ul {
-        position: static;
-        display: none;
+
+    main {
+        padding: 1.5rem;
     }
-    
-    .submenu:hover > ul {
-        display: block;
+
+    main h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+
+    button {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    nav > ul > li > a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        padding: 1.25rem;
+        border-left-width: 4px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        padding: 0.65rem;
+        margin-bottom: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.65rem;
+        font-size: 0.9rem;
     }
 }
